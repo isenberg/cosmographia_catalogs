@@ -1,4 +1,4 @@
-# Comet Catalog Files for NASA Cosmographia
+# Comet catalog files for NASA Cosmographia simulating visual dust / ion tail appearance
 
 ## Cosmographia
 
