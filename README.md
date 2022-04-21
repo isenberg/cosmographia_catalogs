@@ -19,5 +19,5 @@ It's achieved by using the Cosmographia Particle System (ParticleSystem keyword)
 ## Orbital Elements / SPICE data
 Source of the keplerian orbital elements included in the JSON files: https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html
 
-The .bsp SPICE kernel used for some comets was generated as Small Body SPK File here: https://ssd.jpl.nasa.gov/horizons/app.html
+The .bsp SPICE kernel used for those comets with hyperbolic trajectories was generated as Small Body SPK File here: https://ssd.jpl.nasa.gov/horizons/app.html
 
