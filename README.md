@@ -1,17 +1,16 @@
-# cosmographia_catalogs
-# Comet catalog files for NASA Cosmographia
+# Comet Catalog Files for NASA Cosmographia
 
-# Cosmographia
+## Cosmographia
 
 NASA Cosmographia solar system and mission visualization tool main page: https://naif.jpl.nasa.gov/naif/cosmographia.html
 
-# Usage
+## Usage
 
 Within Cosmographia load the comet JSON files from File -> Open Catalog and change the time to a day around the comet perihelion to view it with its dust tail, ion tail and for some also the sodium tail. 
 
 To get a simulation of viewing it from Earth, search for Earth, go to it and then search for the comet and select Point At to view it. Change the distance from Earth with the Touchpad Scroll Up/Down gesture and adjust the field of view with the Touchpad Zoom In/Out gesture.
 
-# Comet Tail Simulation
+## Comet Tail Simulation
 
 It's not a real simulation of the dust, ion and sodium tails of comets, but the visual appearance and its change around the few days to weeks of perihelion closely matches the actual observation of those comets.
 
