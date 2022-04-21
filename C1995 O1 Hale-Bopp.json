@@ -117,8 +117,8 @@
                 "sides" : [ 700000, 700000, 700000 ],
                 "velocity" : [ 0, 8000, 0 ]
               },
-              "force" : [ 0, 0, 0.2 ],
-              "velocityVariation" : 300,
+              "force" : [ 0, 0, 0.25 ],
+              "velocityVariation" : 400,
               "spawnRate" : 20,
               "lifetime" : 8000,
               "trace" : 0,
