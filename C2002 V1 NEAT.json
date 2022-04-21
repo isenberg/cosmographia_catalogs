@@ -1,0 +1,144 @@
+  {
+    "version": "1.0",
+    "author" : "Holger Isenberg areo.info",
+    "date" : "2022-04-20",
+    "description" : "Visual Simulation matching photographic observations in scale and appearance of dust tail, ion tail and coma around February 2003.",
+    "items" :
+    [
+      {
+        "name" : "C/2002 V1 NEAT",
+        "class" : "comet",
+        "label" : { "color" : "#ffff00", "fadeSize": 0, "showText": "true" },
+        "trajectoryPlot": { "duration": "2d", "color": "#ffff00", "fade": 0.3, "lineWidth": 5, "opacity": 1.0, "visible": "false" },
+        "mass": "1000000000000000 kg",
+        "center": "Sun",
+        "trajectoryFrame": "EclipticJ2000",
+        "trajectory": {
+          "type": "Keplerian",
+          "epoch": 2452634.5,
+          "period": "32123.55642489309 y",
+          "semiMajorAxis": "1100 au",
+          "_aphelionDistance": "2020.934685919851 au",
+          "eccentricity": 0.9999017748627322,
+          "inclination": 81.7060566720839,
+          "ascendingNode": 64.08842957735027,
+          "argumentOfPeriapsis": 152.1696864278609,
+          "meanAnomaly": 359.998334078724
+        },
+        "bodyFrame": "EclipticJ2000",
+        "geometry" :
+        {
+          "type" : "Globe",
+          "radii" : [ 400000.0, 400000.0, 400000.0 ]
+        }
+      },
+      {
+        "name" : "C/2002 V1 NEAT dust tail",
+        "startTime": "2003-02-14T00:00:00 UTC",
+        "endTime": "2003-02-23T00:00:00 UTC",    
+        "center" : "C/2002 V1 NEAT",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "C/2002 V1 NEAT",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "C/2002 V1 NEAT",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 700000, 700000, 700000 ],
+                "velocity" : [ 0, 400, 0 ]
+              },
+              "force" : [ 0, 0, 0.08 ],
+              "velocityVariation" : 200,
+              "spawnRate" : 20,
+              "lifetime" : 10000,
+              "trace" : 0,
+              "startSize" : 10000,
+              "endSize" : 60000,
+              "emissive" : true,
+              "phaseAsymmetry" : 0,
+              "colors" : [
+                "#ffffff", 0.2,
+                "#ffffff", 0.1,
+                "#ffffff", 0.0
+              ],
+              "startTime": "2003-02-14T00:00:00 UTC",
+              "endTime": "2003-02-23T00:00:00 UTC"  
+            }
+          ]
+        }
+      },
+      {
+        "name" : "C/2002 V1 NEAT ion tail",
+        "startTime": "2002-02-01T00:00:00 UTC",
+        "endTime": "2004-02-01T00:00:00 UTC",    
+        "center" : "C/2002 V1 NEAT",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "C/2002 V1 NEAT",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "C/2002 V1 NEAT",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 200000, 200000, 200000 ],
+                "velocity" : [ 0, 8000, 0 ]
+              },
+              "force" : [ 0, 0, 0.2 ],
+              "velocityVariation" : 300,
+              "spawnRate" : 20,
+              "lifetime" : 1000,
+              "trace" : 0,
+              "startSize" : 5000,
+              "endSize" : 20000,
+              "emissive" : true,
+              "phaseAsymmetry" : 0,
+              "colors" : [
+                "#6060ff", 0.8,
+                "#3030ff", 0.3,
+                "#2020ff", 0.0
+              ],
+              "startTime": "2002-02-01T00:00:00 UTC",
+              "endTime": "2004-02-01T00:00:00 UTC"              
+            }
+          ]
+        }
+      }
+    ]
+  }

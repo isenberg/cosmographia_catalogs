@@ -1,0 +1,139 @@
+  {
+    "version": "1.0",
+    "author" : "Holger Isenberg areo.info",
+    "date" : "2022-04-20",
+    "description" : "Visual Simulation matching photographic observations in scale and appearance around January 2007.",
+    "spiceKernels" :
+    [ 
+      "C2006 P1 McNaught.bsp"
+    ],
+    "items" :
+    [
+      {
+        "name" : "C/2006 P1 McNaught",
+        "class" : "comet",
+        "label" : { "color" : "#ffff00", "fadeSize": 0, "showText": "true" },
+        "trajectoryPlot": { "duration": "1 d", "color": "#ffff00", "fade": 0.3, "lineWidth": 5, "opacity": 1.0, "visible": "false" },
+        "mass": "1000000000000 kg",
+        "center": "Sun",
+        "trajectory": {
+          "type": "Spice",
+          "target": "1002410",
+          "center": "SOLAR SYSTEM BARYCENTER"
+        },
+        "bodyFrame": "EclipticJ2000",
+        "geometry" :
+        {
+         "type" : "Globe",
+         "radii" : [ 70000.0, 70000.0, 70000.0 ]
+        }
+      }
+      ,
+      {
+        "name" : "C/2006 P1 McNaught dust tail",    
+        "startTime": "2007-01-01T00:00:00 UTC",
+        "endTime": "2007-02-20T00:00:00 UTC",
+        "center" : "C/2006 P1 McNaught",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "C/2006 P1 McNaught",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "C/2006 P1 McNaught",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 200000, 200000, 5 ],
+                "velocity" : [ 0, 2000, 0 ]
+              },
+              "force" : [ 0, 0, 0.3 ],
+              "velocityVariation" : 200,
+              "spawnRate" : 20,
+              "lifetime" : 10000,
+              "trace" : 0,
+              "startSize" : 1000,
+              "endSize" : 50000,
+              "colors" : [
+                "#8080ff", 0.6,
+                "#8080ff", 0.3,
+                "#8080ff", 0.0
+              ],
+              "startTime": "2007-01-01T00:00:00 UTC",
+              "endTime": "2007-02-20T00:00:00 UTC"
+            }
+          ]
+        }
+      }
+,
+      {
+        "name" : "C/2006 P1 McNaught ion tail",    
+        "startTime": "2006-01-01T00:00:00 UTC",
+        "endTime": "2008-01-01T00:00:00 UTC",
+        "center" : "C/2006 P1 McNaught",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "C/2006 P1 McNaught",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "C/2006 P1 McNaught",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 2000, 2000, 5 ],
+                "velocity" : [ 0, 20000, 0 ]
+              },
+              "force" : [ 0, 0.3, 0 ],
+              "velocityVariation" : 50,
+              "spawnRate" : 20,
+              "lifetime" : 200,
+              "trace" : 0,
+              "startSize" : 1000,
+              "endSize" : 10000,
+              "colors" : [
+                "#100fff", 0.4,
+                "#100fff", 0.2,
+                "#0f0fff", 0.0
+              ],
+              "startTime": "2006-01-01T00:00:00 UTC",
+              "endTime": "2008-01-01T00:00:00 UTC"
+            }
+          ]
+        }
+      }
+    ]
+  }
+
