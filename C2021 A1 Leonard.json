@@ -58,7 +58,7 @@
                 "type" : "Box",
                 "center" : [ 0, 0, 0 ],
                 "sides" : [ 200000, 200000, 200000 ],
-                "velocity" : [ 315, 1000, 350 ]
+                "velocity" : [ 0, 1000, 0 ]
               },
               "force" : [ 0, 0, 0.2 ],
               "velocityVariation" : 200,
@@ -112,9 +112,9 @@
                 "type" : "Box",
                 "center" : [ 0, 0, 0 ],
                 "sides" : [ 700000, 700000, 700000 ],
-                "velocity" : [ 2520, 8000, 2800 ]
+                "velocity" : [ 0, 8000, 0 ]
               },
-              "force" : [ 0, 0, 0.0000025 ],
+              "force" : [ 0, 0, 0.2 ],
               "velocityVariation" : 180,
               "spawnRate" : 20,
               "lifetime" : 3000,
@@ -166,9 +166,9 @@
                 "type" : "Box",
                 "center" : [ 0, 0, 0 ],
                 "sides" : [ 100000, 100000, 100000 ],
-                "velocity" : [ 6300, 20000, 7000 ]
+                "velocity" : [ 0, 20000, 0 ]
               },
-              "force" : [ 0, 0, 0.000000002 ],
+              "force" : [ 0, 0, 0.2 ],
               "velocityVariation" : 150,
               "spawnRate" : 20,
               "lifetime" : 3000,
