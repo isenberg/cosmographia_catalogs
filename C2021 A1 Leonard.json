@@ -1,0 +1,192 @@
+  {
+    "version": "1.0",
+    "author" : "Holger Isenberg areo.info",
+    "date" : "2022-04-17",
+    "description" : "Visual Simulation matching photographic observations in scale and appearance of dust, ion and sodium tail and coma around April 1997.",
+    "spiceKernels" :
+    [ 
+      "C2021 A1 Leonard.bsp"
+    ],
+    "items" :
+    [
+      {
+        "name" : "C/2021 A1 Leonard",
+        "class" : "comet",
+        "label" : { "color" : "#ffff00", "fadeSize": 0, "showText": "true" },
+        "trajectoryPlot": { "duration": "2d", "color": "#ffff00", "fade": 0.3, "lineWidth": 5, "opacity": 1.0, "visible": "false" },
+        "mass": "1000000000000000 kg",
+        "center": "Sun",
+        "trajectory": {
+          "type": "Spice",
+          "target": "1003751",
+          "center": "SOLAR SYSTEM BARYCENTER"
+        },
+        "bodyFrame": "EclipticJ2000",
+        "geometry" :
+        {
+          "type" : "Globe",
+          "radii" : [ 100000.0, 100000.0, 100000.0 ]
+        }
+      },
+      {
+        "name" : "C/2021 A1 Leonard dust tail",
+        "center" : "C/2021 A1 Leonard",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "C/2021 A1 Leonard",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "C/2021 A1 Leonard",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 200000, 200000, 200000 ],
+                "velocity" : [ 315, 1000, 350 ]
+              },
+              "force" : [ 0, 0, 0.2 ],
+              "velocityVariation" : 200,
+              "spawnRate" : 20,
+              "lifetime" : 10000,
+              "trace" : 0,
+              "startSize" : 5000,
+              "endSize" : 20000,
+              "emissive" : true,
+              "phaseAsymmetry" : 0,
+              "colors" : [
+                "#ffffff", 0.2,
+                "#ffffff", 0.1,
+                "#ffffff", 0.0
+              ],
+              "startTime": "2020-07-11T00:00:00 UTC",
+              "endTime": "2022-07-11T00:00:00 UTC"
+            }
+          ]
+        }
+      },
+      {
+        "name" : "C/2021 A1 Leonard ion tail",
+        "startTime": "2020-07-11T00:00:00 UTC",
+        "endTime": "2022-07-11T00:00:00 UTC", 
+        "center" : "C/2021 A1 Leonard",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "C/2021 A1 Leonard",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "C/2021 A1 Leonard",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 700000, 700000, 700000 ],
+                "velocity" : [ 2520, 8000, 2800 ]
+              },
+              "force" : [ 0, 0, 0.0000025 ],
+              "velocityVariation" : 180,
+              "spawnRate" : 20,
+              "lifetime" : 3000,
+              "trace" : 0,
+              "startSize" : 2000,
+              "endSize" : 20000,
+              "emissive" : true,
+              "phaseAsymmetry" : 0,
+              "colors" : [
+                "#1010ff", 1.5,
+                "#1010ff", 0.7,
+                "#0f0fff", 0.0
+              ],
+              "startTime": "2020-07-11T00:00:00 UTC",
+              "endTime": "2022-07-11T00:00:00 UTC"
+            }
+          ]
+        }
+      },
+      {
+        "name" : "C/2021 A1 Leonard sodium tail",
+        "startTime": "2020-07-11T00:00:00 UTC",
+        "endTime": "2022-07-11T00:00:00 UTC",
+        "center" : "C/2021 A1 Leonard",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "C/2021 A1 Leonard",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "C/2021 A1 Leonard",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 100000, 100000, 100000 ],
+                "velocity" : [ 6300, 20000, 7000 ]
+              },
+              "force" : [ 0, 0, 0.000000002 ],
+              "velocityVariation" : 150,
+              "spawnRate" : 20,
+              "lifetime" : 3000,
+              "trace" : 0,
+              "startSize" : 2000,
+              "endSize" : 20000,
+              "emissive" : true,
+              "phaseAsymmetry" : 0,
+              "colors" : [
+                "#604000", 1.4,
+                "#604000", 1.2,
+                "#604000", 0.0
+              ],
+              "startTime": "2020-07-11T00:00:00 UTC",
+              "endTime": "2022-07-11T00:00:00 UTC"
+            }
+          ]
+        }
+      }
+    ]
+  }

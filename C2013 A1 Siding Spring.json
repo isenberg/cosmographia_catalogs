@@ -1,0 +1,193 @@
+  {
+    "version": "1.0",
+    "author" : "Holger Isenberg areo.info",
+    "date" : "2022-05-15",
+    "description" : "Visual Simulation matching other simulations near its 2014-10-19 close approach to Mars. SPICE data source https://spiftp.esac.esa.int/data/PSA/MEX-E-M-SPICE-6-V2.0/DATA/FK/MEX_SCI_V01.TF",
+    "spiceKernels" :
+    [ 
+	"C2013 A1 Siding Spring DE405.bsp",
+	"C2013 A1 Siding Spring C2013A1_S105_MERGED.bsp"
+    ],
+    "items" :
+    [
+      {
+        "name" : "C/2013 A1 Siding Spring",
+        "class" : "comet",
+        "label" : { "color" : "#ffff00", "fadeSize": 0, "showText": "true" },
+        "trajectoryPlot": { "duration": "2d", "color": "#ffff00", "fade": 0.3, "lineWidth": 5, "opacity": 1.0, "visible": "false" },
+        "mass": "1000000000000000 kg",
+        "center": "Sun",
+        "trajectory": {
+          "type": "Spice",
+          "target": "1003228",
+          "center": "SOLAR SYSTEM BARYCENTER"
+        },
+        "bodyFrame": "EclipticJ2000",
+        "geometry" :
+        {
+          "type" : "Globe",
+          "radii" : [ 50000.0, 50000.0, 50000.0 ]
+        }
+      },
+      {
+        "name" : "C/2013 A1 Siding Spring dust tail",
+        "center" : "C/2013 A1 Siding Spring",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "C/2013 A1 Siding Spring",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "C/2013 A1 Siding Spring",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 100000, 100000, 100000 ],
+                "velocity" : [ 0, 500, 0 ]
+              },
+              "force" : [ 0, 0, 0.2 ],
+              "velocityVariation" : 200,
+              "spawnRate" : 20,
+              "lifetime" : 6000,
+              "trace" : 0,
+              "startSize" : 3000,
+              "endSize" : 10000,
+              "emissive" : true,
+              "phaseAsymmetry" : 0,
+              "colors" : [
+                "#ffffff", 0.2,
+                "#ffffff", 0.1,
+                "#ffffff", 0.0
+              ],
+              "startTime": "2013-01-01T00:00:00 UTC",
+              "endTime": "2016-01-01T00:00:00 UTC"
+            }
+          ]
+        }
+      },
+      {
+        "name" : "C/2013 A1 Siding Spring ion tail",
+        "startTime": "2013-01-01T00:00:00 UTC",
+        "endTime": "2016-01-01T00:00:00 UTC", 
+        "center" : "C/2013 A1 Siding Spring",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "C/2013 A1 Siding Spring",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "C/2013 A1 Siding Spring",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 100000, 100000, 100000 ],
+                "velocity" : [ 0, 4000, 0 ]
+              },
+              "force" : [ 0, 0, 0.2 ],
+              "velocityVariation" : 180,
+              "spawnRate" : 20,
+              "lifetime" : 1000,
+              "trace" : 0,
+              "startSize" : 2000,
+              "endSize" : 10000,
+              "emissive" : true,
+              "phaseAsymmetry" : 0,
+              "colors" : [
+                "#1010ff", 1.5,
+                "#1010ff", 0.7,
+                "#0f0fff", 0.0
+              ],
+              "startTime": "2013-01-01T00:00:00 UTC",
+              "endTime": "2016-01-01T00:00:00 UTC"
+            }
+          ]
+        }
+      },
+      {
+        "name" : "C/2013 A1 Siding Spring sodium tail",
+        "startTime": "2013-01-01T00:00:00 UTC",
+        "endTime": "2016-01-01T00:00:00 UTC",
+        "center" : "C/2013 A1 Siding Spring",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "C/2013 A1 Siding Spring",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "C/2013 A1 Siding Spring",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 100000, 100000, 100000 ],
+                "velocity" : [ 0, 20000, 0 ]
+              },
+              "force" : [ 0, 0, 0.2 ],
+              "velocityVariation" : 150,
+              "spawnRate" : 20,
+              "lifetime" : 250,
+              "trace" : 0,
+              "startSize" : 1000,
+              "endSize" : 5000,
+              "emissive" : true,
+              "phaseAsymmetry" : 0,
+              "colors" : [
+                "#604000", 1.4,
+                "#604000", 1.2,
+                "#604000", 0.0
+              ],
+              "startTime": "2013-01-01T00:00:00 UTC",
+              "endTime": "2016-01-01T00:00:00 UTC"
+            }
+          ]
+        }
+      }
+    ]
+  }
