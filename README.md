@@ -29,5 +29,4 @@ The .bsp SPICE kernel used for those comets with hyperbolic trajectories was gen
 Screenshots taken in Cosmographia and visually similar real observations:
 * [C1995 O1 Hale-Bopp.jpg](C1995%20O1%20Hale-Bopp.jpg) matches https://apod.nasa.gov/apod/ap070331.html
 * [C2006 P1 McNaught.jpg](C2006%20P1%20McNaught.jpg) matches https://www.eso.org/public/images/esopia00100teles
-
-
+* [C2022 E3 ZTF.jpg](C2022%20E3%20ZTF.jpg) matches https://www.astrobin.com/07qt67/?q=C/2022%20E3%20ZTF
