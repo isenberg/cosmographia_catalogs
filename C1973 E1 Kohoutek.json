@@ -13,7 +13,7 @@
         "name" : "C/1973 E1 Kohoutek",
         "class" : "comet",
         "label" : { "color" : "#ffff00", "fadeSize": 0, "showText": "true" },
-        "trajectoryPlot": { "duration": "2d", "color": "#ffff00", "fade": 0.3, "lineWidth": 5, "opacity": 1.0, "visible": "false" },
+        "trajectoryPlot": { "duration": "18h", "color": "#ffffa0", "fade": 0.3, "lineWidth": 5, "opacity": 1.0, "visible": "false" },
         "mass": "1000000000000000 kg",
         "center": "Sun",
         "trajectory": {
@@ -65,8 +65,8 @@
               "spawnRate" : 20,
               "lifetime" : 5000,
               "trace" : 0,
-              "startSize" : 2000,
-              "endSize" : 10000,
+              "startSize" : 1500,
+              "endSize" : 7000,
               "emissive" : true,
               "phaseAsymmetry" : 0,
               "colors" : [
@@ -115,18 +115,18 @@
                 "velocity" : [ 0, 8000, 0 ]
               },
               "force" : [ 0, 0, 0.2 ],
-              "velocityVariation" : 180,
-              "spawnRate" : 20,
-              "lifetime" : 3000,
+              "velocityVariation" : 400,
+              "spawnRate" : 10,
+              "lifetime" : 1000,
               "trace" : 0,
-              "startSize" : 2000,
-              "endSize" : 20000,
+              "startSize" : 1000,
+              "endSize" : 10000,
               "emissive" : true,
               "phaseAsymmetry" : 0,
               "colors" : [
-                "#1010ff", 1.0,
-                "#1010ff", 0.5,
-                "#0f0fff", 0.0
+                "#6060ff", 0.8,
+                "#6060ff", 0.5,
+                "#0f0fff", 0.1
               ],
               "startTime": "1972-01-01T00:00:00 UTC",
               "endTime": "1975-01-01T00:00:00 UTC"
@@ -165,22 +165,64 @@
               { 
                 "type" : "Box",
                 "center" : [ 0, 0, 0 ],
-                "sides" : [ 100000, 100000, 100000 ],
+                "sides" : [ 400000, 400000, 400000 ],
                 "velocity" : [ 0, 20000, 0 ]
               },
               "force" : [ 0, 0, 0.2 ],
-              "velocityVariation" : 150,
+              "velocityVariation" : 2000,
               "spawnRate" : 20,
-              "lifetime" : 1500,
+              "lifetime" : 500,
               "trace" : 0,
-              "startSize" : 1000,
-              "endSize" : 5000,
+              "startSize" : 3000,
+              "endSize" : 15000,
               "emissive" : true,
               "phaseAsymmetry" : 0,
               "colors" : [
-                "#604000", 1.4,
-                "#604000", 1.2,
-                "#604000", 0.0
+                "#906000", 1.4,
+                "#906000", 1.2,
+                "#906000", 0.0
+              ],
+              "startTime": "1972-01-01T00:00:00 UTC",
+              "endTime": "1975-01-01T00:00:00 UTC"
+            }
+          ]
+        }
+      }
+      ,
+      {
+        "name" : "C/1973 E1 Kohoutek coma",
+        "startTime": "1972-01-01T00:00:00 UTC",
+        "endTime": "1975-01-01T00:00:00 UTC",
+        "center" : "C/1973 E1 Kohoutek",
+        "bodyFrame": {
+          "type": "BodyFixed", 
+          "body": "C/1973 E1 Kohoutek" 
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 300000, 300000, 300000 ],
+                "velocity" : [ 0, 0, 0 ]
+              },
+              "force" : [ 0, 0, 0 ],
+              "velocityVariation" : 700,
+              "spawnRate" : 30,
+              "lifetime" : 500,
+              "trace" : 0,
+              "startSize" : 5000,
+              "endSize" : 5000,
+              "colors" : [
+                "#ffffff", 1.0,
+                "#ffffff", 1.0,
+                "#ffffff", 1.0 
               ],
               "startTime": "1972-01-01T00:00:00 UTC",
               "endTime": "1975-01-01T00:00:00 UTC"
