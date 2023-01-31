@@ -1,51 +1,52 @@
   {
     "version": "1.0",
-    "author" : "Holger Isenberg areo.info, SPICE from https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=C%2F2022%20E3&view=VOP",
-    "date" : "2023-01-28",
-    "description" : "The Green Comet of January 2023. Visual Simulation matching photographic observations in scale and appearance around January 2023.",
+    "author" : "Holger Isenberg areo.info",
+    "date" : "2023-01-30",
+    "description" : "Visual Simulation matching photographic observations in scale and appearance around April 1957.",
     "spiceKernels" :
     [ 
-      "C2022 E3 ZTF.bsp"
+      "C1956 R1 Arend-Roland.bsp"
     ],
     "items" :
     [
       {
-        "name" : "C/2022 E3 ZTF",
+        "name" : "C/1956 R1 Arend-Roland",
         "class" : "comet",
         "label" : { "color" : "#ffff00", "fadeSize": 0, "showText": "true" },
-        "trajectoryPlot": { "duration": "12h", "color": "#ffbb00", "fade": 0.3, "lineWidth": 5, "opacity": 1.0, "visible": "false" },
+        "trajectoryPlot": { "duration": "1 d", "color": "#ffffff", "fade": 0.2, "lineWidth": 5, "opacity": 1.0, "visible": "false" },
         "mass": "1000000000000 kg",
         "center": "Sun",
         "trajectory": {
           "type": "Spice",
-          "target": 1003845,
+          "target": "1001097",
           "center": "SUN"
         },
         "bodyFrame": "EclipticJ2000",
         "geometry" :
         {
          "type" : "Globe",
-         "radii" : [ 30000.0, 30000.0, 30000.0 ]
+         "color" : "#ffffff",
+         "radii" : [ 300000.0, 300000.0, 300000.0 ]
         }
       }
       ,
       {
-        "name" : "C/2022 E3 ZTF dust tail",    
-        "startTime": "2022-08-01T00:00:00 UTC",
-        "endTime": "2023-08-01T00:00:00 UTC",
-        "center" : "C/2022 E3 ZTF",
+        "name" : "C/1956 R1 Arend-Roland dust tail",    
+        "startTime": "1956-01-01T00:00:00 UTC",
+        "endTime": "1959-01-01T00:00:00 UTC",
+        "center" : "C/1956 R1 Arend-Roland",
         "bodyFrame": {
           "type": "TwoVector", 
           "primaryAxis": "-y", 
           "primary": {
             "type": "RelativePosition", 
-            "observer": "C/2022 E3 ZTF",
+            "observer": "C/1956 R1 Arend-Roland",
             "target": "Sun" 
           }, 
           "secondaryAxis": "z", 
           "secondary": {
             "type": "RelativeVelocity", 
-            "observer": "C/2022 E3 ZTF",
+            "observer": "C/1956 R1 Arend-Roland",
             "target": "Sun" 
           }
         }, 
@@ -60,45 +61,45 @@
               { 
                 "type" : "Box",
                 "center" : [ 0, 0, 0 ],
-                "sides" : [ 70000, 70000, 70000 ],
+                "sides" : [ 500000, 500000, 500000 ],
                 "velocity" : [ 0, 2000, 0 ]
               },
-              "force" : [ 0, 0.3, 0 ],
-              "velocityVariation" : 500,
+              "force" : [ 0, 0, 0.3 ],
+              "velocityVariation" : 70,
               "spawnRate" : 20,
-              "lifetime" : 500,
+              "lifetime" : 10000,
               "trace" : 0,
-              "startSize" : 2000,
+              "startSize" : 8000,
               "endSize" : 2000,
               "colors" : [
                 "#8080ff", 0.6,
                 "#8080ff", 0.3,
                 "#8080ff", 0.0
               ],
-              "startTime": "2022-08-01T00:00:00 UTC",
-              "endTime": "2023-08-01T00:00:00 UTC"
+              "startTime": "1956-01-01T00:00:00 UTC",
+              "endTime": "1959-01-01T00:00:00 UTC"
             }
           ]
         }
       }
 ,
       {
-        "name" : "C/2022 E3 ZTF ion tail",    
-        "startTime": "2022-08-01T00:00:00 UTC",
-        "endTime": "2023-08-01T00:00:00 UTC",
-        "center" : "C/2022 E3 ZTF",
+        "name" : "C/1956 R1 Arend-Roland ion tail",    
+        "startTime": "1956-01-01T00:00:00 UTC",
+        "endTime": "1959-01-01T00:00:00 UTC",
+        "center" : "C/1956 R1 Arend-Roland",
         "bodyFrame": {
           "type": "TwoVector", 
           "primaryAxis": "-y", 
           "primary": {
             "type": "RelativePosition", 
-            "observer": "C/2022 E3 ZTF",
+            "observer": "C/1956 R1 Arend-Roland",
             "target": "Sun" 
           }, 
           "secondaryAxis": "z", 
           "secondary": {
             "type": "RelativeVelocity", 
-            "observer": "C/2022 E3 ZTF",
+            "observer": "C/1956 R1 Arend-Roland",
             "target": "Sun" 
           }
         }, 
@@ -113,36 +114,36 @@
               { 
                 "type" : "Box",
                 "center" : [ 0, 0, 0 ],
-                "sides" : [ 2000, 5, 2000 ],
-                "velocity" : [ 0, 10000, 0 ]
+                "sides" : [ 5000, 5000, 5000 ],
+                "velocity" : [ 0, 20000, 0 ]
               },
               "force" : [ 0, 0.3, 0 ],
-              "velocityVariation" : 200,
-              "spawnRate" : 10,
-              "lifetime" : 200,
+              "velocityVariation" : 300,
+              "spawnRate" : 20,
+              "lifetime" : 1000,
               "trace" : 0,
               "startSize" : 1000,
               "endSize" : 10000,
               "colors" : [
                 "#100fff", 0.4,
-                "#100fff", 0.2,
+                "#100fff", 0.4,
                 "#0f0fff", 0.0
               ],
-              "startTime": "2022-08-01T00:00:00 UTC",
-              "endTime": "2023-08-01T00:00:00 UTC"
+              "startTime": "1956-01-01T00:00:00 UTC",
+              "endTime": "1959-01-01T00:00:00 UTC"
             }
           ]
         }
       }
-      ,
+,
       {
-        "name" : "C/2022 E3 ZTF coma",    
-        "startTime": "2022-08-01T00:00:00 UTC",
-        "endTime": "2023-08-01T00:00:00 UTC",
-        "center" : "C/2022 E3 ZTF",
+        "name" : "C/1956 R1 Arend-Roland coma",
+        "startTime": "1956-01-01T00:00:00 UTC",
+        "endTime": "1959-01-01T00:00:00 UTC",
+        "center" : "C/1956 R1 Arend-Roland",
         "bodyFrame": {
           "type": "BodyFixed", 
-          "body": "C/2022 E3 ZTF" 
+          "body": "C/1956 R1 Arend-Roland"
         }, 
         "geometry" :
         {
@@ -155,23 +156,23 @@
               { 
                 "type" : "Box",
                 "center" : [ 0, 0, 0 ],
-                "sides" : [ 30000, 30000, 30000 ],
+                "sides" : [ 400000, 400000, 400000 ],
                 "velocity" : [ 0, 0, 0 ]
               },
               "force" : [ 0, 0, 0 ],
-              "velocityVariation" : 700,
+              "velocityVariation" : 500,
               "spawnRate" : 30,
-              "lifetime" : 500,
+              "lifetime" : 700,
               "trace" : 0,
-              "startSize" : 2000,
-              "endSize" : 2000,
+              "startSize" : 10000,
+              "endSize" : 10000,
               "colors" : [
-                "#f0b0ff", 0.5,
-                "#0498f0", 0.5,
-                "#0498f0", 0.2
+                "#ffffff", 1.0,
+                "#ffffff", 1.0,
+                "#ffffff", 1.0
               ],
-              "startTime": "2022-08-01T00:00:00 UTC",
-              "endTime": "2023-08-01T00:00:00 UTC"
+              "startTime": "1956-01-01T00:00:00 UTC",
+              "endTime": "1959-01-01T00:00:00 UTC"
             }
           ]
         }
