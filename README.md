@@ -6,9 +6,13 @@ NASA Cosmographia solar system and mission visualization tool main page: https:/
 
 ## Usage
 
-Within Cosmographia load the comet JSON files from File -> Open Catalog and change the time to a day around the comet perihelion to view it with its dust tail, ion tail and for some also the sodium tail. 
+Download all files with `git clone https://github.com/isenberg/cosmographia_catalogs` or as ZIP from the Download selector in the upper right and place them into a directory in your Documents folder or some other location.
+
+Start Cosmographia and select from its menu **File -> Open Catalog** to load one of the Comet.json files and afterwards change the time with the clock icon to a day around the comet perihelion to view it with its dust tail, ion tail and for some also the sodium tail. To view the orbit trail of its previous locations during the last few hours, select **Guides -> Plot Trajectory** in the menu. For some comets, like Arend-Roland or 2022 E3 ZTF, this matches the anti-tail.
 
 To get a simulation of viewing it from Earth, search for Earth, go to it and then search for the comet and select Point At to view it. Change the distance from Earth with the Touchpad Scroll Up/Down gesture and adjust the field of view with the Touchpad Zoom In/Out gesture.
+
+The radius displayed when clicking on the comet is an approximation of the visual coma radius, not the solid nucleus radius.
 
 ## Comet Tail Simulation
 
@@ -30,3 +34,4 @@ Screenshots taken in Cosmographia and visually similar real observations:
 * [C1995 O1 Hale-Bopp.jpg](C1995%20O1%20Hale-Bopp.jpg) matches https://apod.nasa.gov/apod/ap070331.html
 * [C2006 P1 McNaught.jpg](C2006%20P1%20McNaught.jpg) matches https://www.eso.org/public/images/esopia00100teles
 * [C2022 E3 ZTF.jpg](C2022%20E3%20ZTF.jpg) matches https://www.astrobin.com/07qt67/?q=C/2022%20E3%20ZTF
+* [C1956 R1 Arend-Roland.jpg](C1956%20R1%20Arend-Roland.jpg) matches http://stony-ridge.org/AlanMcClure.html
