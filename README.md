@@ -35,4 +35,4 @@ Screenshots taken in Cosmographia and visually similar real observations:
 * [C2006 P1 McNaught.jpg](C2006%20P1%20McNaught.jpg) matches https://www.eso.org/public/images/esopia00100teles
 * [C2022 E3 ZTF.jpg](C2022%20E3%20ZTF.jpg) matches https://www.astrobin.com/07qt67/?q=C/2022%20E3%20ZTF
 * [C1956 R1 Arend-Roland.jpg](C1956%20R1%20Arend-Roland.jpg) matches http://stony-ridge.org/AlanMcClure.html
-* [C1973 E1 Kohoutek.jpg](C1973%20E1%20Kohoutek.jpg) matches https://en.wikipedia.org/wiki/Comet_Kohoutek#/media/File:Edward_Gibson_illustration_of_Comet_Kohoutek.jpg
+* [C1973 E1 Kohoutek.jpg](C1973%20E1%20Kohoutek.jpg) matches https://commons.wikimedia.org/wiki/File:Edward_Gibson_illustration_of_Comet_Kohoutek.jpg
