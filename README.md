@@ -2,7 +2,7 @@
 
 ## Cosmographia
 
-NASA Cosmographia solar system and mission visualization tool main page: https://naif.jpl.nasa.gov/naif/cosmographia.html
+NASA Cosmographia solar system and mission visualization tool is available for free download: https://naif.jpl.nasa.gov/naif/cosmographia.html
 
 ## Usage
 
