@@ -8,7 +8,9 @@ NASA Cosmographia solar system and mission visualization tool is available for f
 
 Download all files with `git clone https://github.com/isenberg/cosmographia_catalogs` or as ZIP from the green Code icon in the upper right and place them into a directory in your Documents folder or some other location.
 
-Start Cosmographia and select from its menu **File -> Open Catalog** to load one of the Comet.json files and afterwards change the time with the clock icon to a day around the comet perihelion to view it with its dust tail, ion tail and for some also the sodium tail. To view the orbit trail of its previous locations during the last few hours, select **Guides -> Plot Trajectory** in the menu. For some comets, like Arend-Roland or 2022 E3 ZTF, this matches the anti-tail.
+Start Cosmographia and select from its menu **File -> Open Catalog** to load one of the Comet.json files and afterwards change the time with the clock icon to a day around the comet perihelion to view it with its dust tail, ion tail and for some also the sodium tail.
+
+To view the orbit trail of its previous locations during the last few hours, select **Guides -> Plot Trajectory** in the menu or right-click on the comet nucleus and toggle Trajectory. For some comets, like Arend-Roland or 2022 E3 ZTF, this matches the anti-tail. Some comets have large visible vectors toward Sun and Earth added which can be disabled with a **right-click on the nucleus** and selecting **Sun Direction** and **Earth Direction**.
 
 To get a simulation of viewing it from Earth, search for Earth, go to it and then search for the comet and select Point At to view it. Change the distance from Earth with the Touchpad Scroll Up/Down gesture and adjust the field of view with the Touchpad Zoom In/Out gesture.
 
