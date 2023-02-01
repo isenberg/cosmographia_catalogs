@@ -18,9 +18,9 @@ The radius displayed when clicking on the comet is an approximation of the visua
 
 ## Comet Tail Simulation
 
-It's not a real simulation of the dust, ion and sodium tails of comets, but the visual appearance and its change around the few days to weeks of perihelion closely matches the actual observation of those comets.
+It's a visual simulation of the dust, ion and sodium tails of comets and their change of shape and direction around the few days to weeks of perihelion.
 
-It's achieved by using the Cosmographia Particle System (ParticleSystem keyword) with a workaround to simulate the combined effect of the solar wind force pushing the tail particles radially outwards from the Sun and the effect of tangentially falling behind the nucleus orbit with increased orbit radius due to the radially outwards movement by the solar wind. Instead of applying a force radially to the particles, the workaround uses a constant radially particle ejection speed combined with a force pushing tangentially to the nucleus orbit against the orbital velocity vector. That combination results visually almost to he same and is used as I couldn't find any other way yet in Cosmographia to simulate the tails.
+As Cosmographia doesn't offer an object type for comet tail simulation or a gravity simulator for particles, a workaround was needed to create a model matching actual observations. It's achieved by using the Cosmographia Particle System (ParticleSystem keyword) to simulate the combined effect of the solar wind force pushing the tail particles radially outwards from the Sun and the effect of tangentially falling behind the nucleus orbit with increased orbit radius due to the radially outwards movement by the solar wind. Instead of applying a force radially to the particles, the workaround uses a constant radially particle ejection speed combined with a force pushing tangentially to the nucleus orbit against the orbital velocity vector. That combination results visually almost to he same tail curvature and follows its changes depending on the angle between comet velocity vector and Sun direction.
 
 Please note that in nature there isn't any force tangentially pushing against the orbit velocity vector into the tail particles, it's only used here as mathematical workaround until a better solution exists.
 
