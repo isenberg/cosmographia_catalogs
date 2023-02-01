@@ -25,7 +25,7 @@
         "geometry" :
         {
           "type" : "Globe",
-          "radii" : [ 150000, 150000, 150000 ]
+          "radii" : [ 100000, 100000, 100000 ]
         }
       },
       {
@@ -127,13 +127,13 @@
               { 
                 "type" : "Box",
                 "center" : [ 0, 0, 0 ],
-                "sides" : [ 300000, 300000, 300000 ],
+                "sides" : [ 250000, 250000, 250000 ],
                 "velocity" : [ 0, 0, 0 ]
               },
               "force" : [ 0, 0, 0 ],
               "velocityVariation" : 700,
               "spawnRate" : 30,
-              "lifetime" : 50,
+              "lifetime" : 200,
               "trace" : 0,
               "startSize" : 5000,
               "endSize" : 5000,
