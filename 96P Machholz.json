@@ -1,0 +1,152 @@
+  {
+    "version": "1.0",
+    "author" : "Holger Isenberg areo.info",
+    "date" : "2022-05-15",
+    "description" : "Visual Simulation matching observations during Jan 2023 perihelion",
+    "spiceKernels" :
+    [ 
+      "96P Machholz.bsp"
+    ],
+    "items" :
+    [
+      {
+        "name" : "96P/Machholz",
+        "class" : "comet",
+        "label" : { "color" : "#ffff00", "fadeSize": 0, "showText": "true" },
+        "trajectoryPlot": { "duration": "18h", "color": "#ffc020", "fade": 0.3, "lineWidth": 5, "opacity": 1.0, "visible": "false" },
+        "mass": "1000000000000000 kg",
+        "center": "Sun",
+        "trajectory": {
+          "type": "Spice",
+          "target": "MACHHOLZ",
+          "center": "SUN"
+        },
+        "bodyFrame": "EclipticJ2000",
+        "geometry" :
+        {
+          "type" : "Globe",
+          "radii" : [ 150000, 150000, 150000 ]
+        }
+      },
+      {
+        "type" : "Visualizer",
+        "tag" : "Sun direction",
+        "body" : "96P/Machholz",
+        "style" :
+        {
+          "type" : "BodyDirection",
+          "target": "Sun",
+          "color": "#a0a030",
+          "_size" : 1500000,
+          "size" : 1
+        }
+      },
+      {
+        "type" : "Visualizer",
+        "tag" : "Earth direction",
+        "body" : "96P/Machholz",
+        "style" :
+        {
+          "type" : "BodyDirection",
+          "target": "Earth",
+          "color": "#3030a0",
+          "_size" : 1500000,
+          "size" : 1
+        }
+      },
+      {
+        "name" : "96P/Machholz dust tail",
+        "center" : "96P/Machholz",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "96P/Machholz",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "96P/Machholz",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 300000, 300000, 300000 ],
+                "velocity" : [ 0, 500, 0 ]
+              },
+              "force" : [ 0, 0, 0.04 ],
+              "velocityVariation" : 70,
+              "spawnRate" : 20,
+              "lifetime" : 9000,
+              "trace" : 0,
+              "startSize" : 4000,
+              "endSize" : 7000,
+              "emissive" : true,
+              "phaseAsymmetry" : 0,
+              "colors" : [
+                "#ffffff", 0.2,
+                "#ffffff", 0.1,
+                "#ffffff", 0.0
+              ],
+              "startTime": "2022-01-01T00:00:00 UTC",
+              "endTime": "2024-01-01T00:00:00 UTC"
+            }
+          ]
+        }
+      }
+      ,
+      {
+        "name" : "96P/Machholz coma",
+        "startTime": "2022-01-01T00:00:00 UTC",
+        "endTime": "2024-01-01T00:00:00 UTC",
+        "center" : "96P/Machholz",
+        "bodyFrame": {
+          "type": "BodyFixed", 
+          "body": "96P/Machholz" 
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 300000, 300000, 300000 ],
+                "velocity" : [ 0, 0, 0 ]
+              },
+              "force" : [ 0, 0, 0 ],
+              "velocityVariation" : 700,
+              "spawnRate" : 30,
+              "lifetime" : 50,
+              "trace" : 0,
+              "startSize" : 5000,
+              "endSize" : 5000,
+              "colors" : [
+                "#ffffff", 1.0,
+                "#ffffff", 1.0,
+                "#ffffff", 1.0 
+              ],
+              "startTime": "2022-01-01T00:00:00 UTC",
+              "endTime": "2024-01-01T00:00:00 UTC"
+            }
+          ]
+        }
+      }
+    ]
+  }
