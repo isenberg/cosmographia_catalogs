@@ -13,7 +13,7 @@
         "name" : "C/1973 E1 Kohoutek",
         "class" : "comet",
         "label" : { "color" : "#ffff00", "fadeSize": 0, "showText": "true" },
-        "trajectoryPlot": { "duration": "18h", "color": "#ffffa0", "fade": 0.3, "lineWidth": 5, "opacity": 1.0, "visible": "false" },
+        "trajectoryPlot": { "duration": "18h", "color": "#ffc020", "fade": 0.3, "lineWidth": 5, "opacity": 1.0, "visible": "true" },
         "mass": "1000000000000000 kg",
         "center": "Sun",
         "trajectory": {
@@ -25,7 +25,31 @@
         "geometry" :
         {
           "type" : "Globe",
-          "radii" : [ 150000.0, 150000.0, 150000.0 ]
+          "radii" : [ 150000, 150000, 150000 ]
+        }
+      },
+      {
+        "type" : "Visualizer",
+        "tag" : "Sun direction",
+        "body" : "C/1973 E1 Kohoutek",
+        "style" :
+        {
+          "type" : "BodyDirection",
+          "target": "Sun",
+          "color": "#a0a030",
+          "size" : 1500000
+        }
+      },
+      {
+        "type" : "Visualizer",
+        "tag" : "Earth direction",
+        "body" : "C/1973 E1 Kohoutek",
+        "style" :
+        {
+          "type" : "BodyDirection",
+          "target": "Earth",
+          "color": "#3030a0",
+          "size" : 1500000
         }
       },
       {
