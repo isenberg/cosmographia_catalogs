@@ -1,0 +1,237 @@
+  {
+    "version": "1.0",
+    "author" : "Holger Isenberg areo.info",
+    "date" : "2024-10-15",
+    "description" : "Visual Simulation matching photographic observations in scale and appearance around Oct 13 2024.",
+    "spiceKernels" :
+    [ 
+      "C2023 A3 Tsuchinshan-ATLAS.bsp"
+    ],
+    "items" :
+    [
+      {
+        "name" : "C/2023 A3 Tsuchinshan-ATLAS",
+        "class" : "comet",
+        "label" : { "color" : "#ffff00", "fadeSize": 0, "showText": "true" },
+        "trajectoryPlot": { "duration": "1 d", "color": "#ffffff", "fade": 0.2, "lineWidth": 5, "opacity": 1.0, "visible": "false" },
+        "mass": "1000000000000 kg",
+        "center": "Sun",
+        "trajectory": {
+          "type": "Spice",
+          "target": "1003913",
+          "center": "SUN"
+        },
+        "bodyFrame": "EclipticJ2000",
+        "geometry" :
+        {
+         "type" : "Globe",
+         "color" : "#ffffff",
+         "radii" : [ 300000.0, 300000.0, 300000.0 ]
+        }
+      }
+      ,
+      {
+        "name" : "C/2023 A3 Tsuchinshan-ATLAS dust tail",    
+        "startTime": "2024-08-01T00:00:00 UTC",
+        "endTime": "2024-12-01T00:00:00 UTC",
+        "center" : "C/2023 A3 Tsuchinshan-ATLAS",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "C/2023 A3 Tsuchinshan-ATLAS",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "C/2023 A3 Tsuchinshan-ATLAS",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 500000, 500000, 500000 ],
+                "velocity" : [ 0, 2000, 0 ]
+              },
+              "force" : [ 0, 0, 0.3 ],
+              "velocityVariation" : 70,
+              "spawnRate" : 20,
+              "lifetime" : 10000,
+              "trace" : 0,
+              "startSize" : 8000,
+              "endSize" : 2000,
+              "colors" : [
+                "#8080ff", 0.6,
+                "#8080ff", 0.3,
+                "#8080ff", 0.0
+              ],
+              "startTime": "2024-08-01T00:00:00 UTC",
+              "endTime": "2024-12-01T00:00:00 UTC"
+            }
+          ]
+        }
+      }
+,
+      {
+        "name" : "C/2023 A3 Tsuchinshan-ATLAS ion tail",    
+        "startTime": "2024-08-01T00:00:00 UTC",
+        "endTime": "2024-12-01T00:00:00 UTC",
+        "center" : "C/2023 A3 Tsuchinshan-ATLAS",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "C/2023 A3 Tsuchinshan-ATLAS",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "C/2023 A3 Tsuchinshan-ATLAS",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 5000, 5000, 5000 ],
+                "velocity" : [ 0, 20000, 0 ]
+              },
+              "force" : [ 0, 0.3, 0 ],
+              "velocityVariation" : 300,
+              "spawnRate" : 20,
+              "lifetime" : 1000,
+              "trace" : 0,
+              "startSize" : 1000,
+              "endSize" : 10000,
+              "colors" : [
+                "#100fff", 0.4,
+                "#100fff", 0.4,
+                "#0f0fff", 0.0
+              ],
+              "startTime": "2024-08-01T00:00:00 UTC",
+              "endTime": "2024-12-01T00:00:00 UTC"
+            }
+          ]
+        }
+      }
+,
+      {
+        "name" : "C/2023 A3 Tsuchinshan-ATLAS coma",
+        "startTime": "2024-08-01T00:00:00 UTC",
+        "endTime": "2024-12-01T00:00:00 UTC",
+        "center" : "C/2023 A3 Tsuchinshan-ATLAS",
+        "bodyFrame": {
+          "type": "BodyFixed", 
+          "body": "C/2023 A3 Tsuchinshan-ATLAS"
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 400000, 400000, 400000 ],
+                "velocity" : [ 0, 0, 0 ]
+              },
+              "force" : [ 0, 0, 0 ],
+              "velocityVariation" : 500,
+              "spawnRate" : 30,
+              "lifetime" : 700,
+              "trace" : 0,
+              "startSize" : 10000,
+              "endSize" : 10000,
+              "colors" : [
+                "#ffffff", 1.0,
+                "#ffffff", 1.0,
+                "#ffffff", 1.0
+              ],
+              "startTime": "2024-08-01T00:00:00 UTC",
+              "endTime": "2024-12-01T00:00:00 UTC"
+            }
+          ]
+        }
+      }
+,
+      {
+        "name" : "C/2023 A3 Tsuchinshan-ATLAS sodium tail",
+        "startTime": "2024-08-11T00:00:00 UTC",
+        "endTime": "2024-12-01T00:00:00 UTC",
+        "center" : "C/2023 A3 Tsuchinshan-ATLAS",
+        "bodyFrame": {
+          "type": "TwoVector", 
+          "primaryAxis": "-y", 
+          "primary": {
+            "type": "RelativePosition", 
+            "observer": "C/2023 A3 Tsuchinshan-ATLAS",
+            "target": "Sun" 
+          }, 
+          "secondaryAxis": "z", 
+          "secondary": {
+            "type": "RelativeVelocity", 
+            "observer": "C/2023 A3 Tsuchinshan-ATLAS",
+            "target": "Sun" 
+          }
+        }, 
+        "geometry" :
+        {
+          "type" : "ParticleSystem",
+          "emitters" :
+          [
+            {
+              "texture" : "gaussian.jpg",
+              "generator" :
+              { 
+                "type" : "Box",
+                "center" : [ 0, 0, 0 ],
+                "sides" : [ 100000, 100000, 100000 ],
+                "velocity" : [ 0, 20000, 0 ]
+              },
+              "force" : [ 0, 0, 0.2 ],
+              "velocityVariation" : 150,
+              "spawnRate" : 20,
+              "lifetime" : 1500,
+              "trace" : 0,
+              "startSize" : 2000,
+              "endSize" : 20000,
+              "emissive" : true,
+              "phaseAsymmetry" : 0,
+              "colors" : [
+                "#604000", 1.4,
+                "#604000", 1.2,
+                "#604000", 0.0
+              ],
+               "startTime": "2024-08-01T00:00:00 UTC",
+              "endTime": "2024-12-01T00:00:00 UTC"
+           }
+          ]
+        }
+      }
+    ]
+  }
+
