@@ -25,8 +25,9 @@
         "geometry" :
         {
          "type" : "Globe",
+         "emissive" : true,
          "color" : "#ffffff",
-         "radii" : [ 300000.0, 300000.0, 300000.0 ]
+         "radii" : [ 225000.0, 225000.0, 225000.0 ]
         }
       }
       ,
@@ -61,16 +62,16 @@
               { 
                 "type" : "Box",
                 "center" : [ 0, 0, 0 ],
-                "sides" : [ 500000, 500000, 500000 ],
+                "sides" : [ 450000, 1000, 450000 ],
                 "velocity" : [ 0, 2000, 0 ]
               },
-              "force" : [ 0, 0, 0.3 ],
+              "force" : [ 0, 0, 0.03 ],
               "velocityVariation" : 70,
               "spawnRate" : 20,
               "lifetime" : 10000,
               "trace" : 0,
               "startSize" : 8000,
-              "endSize" : 2000,
+              "endSize" : 4000,
               "colors" : [
                 "#8080ff", 0.6,
                 "#8080ff", 0.3,
@@ -156,16 +157,16 @@
               { 
                 "type" : "Box",
                 "center" : [ 0, 0, 0 ],
-                "sides" : [ 400000, 400000, 400000 ],
+                "sides" : [ 5000, 5000, 5000 ],
                 "velocity" : [ 0, 0, 0 ]
               },
               "force" : [ 0, 0, 0 ],
               "velocityVariation" : 500,
               "spawnRate" : 30,
-              "lifetime" : 700,
+              "lifetime" : 550,
               "trace" : 0,
-              "startSize" : 10000,
-              "endSize" : 10000,
+              "startSize" : 1000,
+              "endSize" : 5000,
               "colors" : [
                 "#ffffff", 1.0,
                 "#ffffff", 1.0,
@@ -213,9 +214,9 @@
                 "velocity" : [ 0, 20000, 0 ]
               },
               "force" : [ 0, 0, 0.2 ],
-              "velocityVariation" : 150,
+              "velocityVariation" : 800,
               "spawnRate" : 20,
-              "lifetime" : 1500,
+              "lifetime" : 800,
               "trace" : 0,
               "startSize" : 2000,
               "endSize" : 20000,
