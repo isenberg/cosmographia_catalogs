@@ -10,7 +10,7 @@ Download all files with `git clone https://github.com/isenberg/cosmographia_cata
 
 Start Cosmographia and select from its menu **File -> Open Catalog** to load one of the Comet.json files and afterwards change the time with the clock icon to a day around the comet perihelion to view it with its dust tail, ion tail and for some also the sodium tail.
 
-To view the orbit trail of its previous locations during the last few hours, select **Guides -> Plot Trajectory** in the menu or right-click on the comet nucleus and toggle Trajectory. For some comets, like Arend-Roland or 2022 E3 ZTF, this matches the anti-tail. Some comets have large visible vectors toward Sun and Earth added which can be disabled with a **right-click on the nucleus** and selecting **Sun Direction** and **Earth Direction**.
+To view the orbit trail of its previous locations during the last few hours, select **Guides -> Plot Trajectory** in the menu or right-click on the comet nucleus and toggle Trajectory. For some comets, like C/2023 A3 Tsuchinshan-ATLAS, Arend-Roland or 2022 E3 ZTF, this matches the anti-tail. Some comets have large visible vectors toward Sun and Earth added which can be disabled with a **right-click on the nucleus** and selecting **Sun Direction** and **Earth Direction**.
 
 To get a simulation of viewing it from Earth, search for Earth, go to it and then search for the comet and select Point At to view it. Change the distance from Earth with the Touchpad Scroll Up/Down gesture and adjust the field of view with the Touchpad Zoom In/Out gesture.
 
@@ -33,6 +33,7 @@ The .bsp SPICE kernel used for those comets with hyperbolic trajectories was gen
 ## Example Images
 
 Screenshots taken in Cosmographia and visually similar real observations:
+* [C2023 A3 Tsuchinshan-ATLAS.jpg](C2023%20A3%20Tsuchinshan-ATLAS.jpg) matches https://astrob.in/kwm904/?q=C/2023%20A3
 * [C1995 O1 Hale-Bopp.jpg](C1995%20O1%20Hale-Bopp.jpg) matches https://apod.nasa.gov/apod/ap070331.html
 * [C2006 P1 McNaught.jpg](C2006%20P1%20McNaught.jpg) matches https://www.eso.org/public/images/esopia00100teles
 * [C2022 E3 ZTF.jpg](C2022%20E3%20ZTF.jpg) matches https://www.astrobin.com/07qt67/?q=C/2022%20E3%20ZTF
