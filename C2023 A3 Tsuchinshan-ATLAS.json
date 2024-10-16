@@ -13,7 +13,7 @@
         "name" : "C/2023 A3 Tsuchinshan-ATLAS",
         "class" : "comet",
         "label" : { "color" : "#ffff00", "fadeSize": 0, "showText": "true" },
-        "trajectoryPlot": { "duration": "1 d", "color": "#ffffff", "fade": 0.2, "lineWidth": 5, "opacity": 1.0, "visible": "false" },
+        "trajectoryPlot": { "duration": "2 d", "color": "#ffffff", "fade": 0.2, "lineWidth": 2, "opacity": 1.0, "visible": "false" },
         "mass": "1000000000000 kg",
         "center": "Sun",
         "trajectory": {
@@ -27,7 +27,7 @@
          "type" : "Globe",
          "emissive" : true,
          "color" : "#ffffff",
-         "radii" : [ 225000.0, 225000.0, 225000.0 ]
+         "radii" : [ 100000.0, 100000.0, 100000.0 ]
         }
       }
       ,
@@ -62,11 +62,11 @@
               { 
                 "type" : "Box",
                 "center" : [ 0, 0, 0 ],
-                "sides" : [ 450000, 1000, 450000 ],
+                "sides" : [ 200000, 1000, 200000 ],
                 "velocity" : [ 0, 2000, 0 ]
               },
               "force" : [ 0, 0, 0.03 ],
-              "velocityVariation" : 70,
+              "velocityVariation" : 100,
               "spawnRate" : 20,
               "lifetime" : 10000,
               "trace" : 0,
@@ -163,7 +163,7 @@
               "force" : [ 0, 0, 0 ],
               "velocityVariation" : 500,
               "spawnRate" : 30,
-              "lifetime" : 550,
+              "lifetime" : 200,
               "trace" : 0,
               "startSize" : 1000,
               "endSize" : 5000,
